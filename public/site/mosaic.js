@@ -147,7 +147,7 @@
         tx = dx / dist * k; ty = dy / dist * k; tz = f * 4 * b.s * LAYER[b.layer];
       }
       // very subtle drift along bottom-right → upper-left flow
-      const dr = b.drift ? Math.sin(t * .25 + b.ph) * 1.6 * b.s : 0;
+      const dr = b.drift ? Math.sin(t * .25 + b.ph) * (coarse.matches || W < 760 ? .5 : 1.6) * b.s : 0;
       tx -= dr * COS; ty -= dr * .5;
       b.vx = (b.vx + (tx - b.ox) * .05) * .8;
       b.vy = (b.vy + (ty - b.oy) * .05) * .8;

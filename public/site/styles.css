@@ -468,3 +468,54 @@ body.route-project #ppRoot{display:block}
   *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.15s!important}
   html{scroll-behavior:auto}
 }
+
+/* ---------- responsive refinements (mobile / tablet) ---------- */
+#heroSub:empty{display:none}
+.sn-short{display:none}
+.prog-thumb{display:none;width:100%;aspect-ratio:16/10;object-fit:cover;border:1px solid var(--line);margin:0 0 1.2rem}
+@media (hover:none),(max-width:860px){ .prog-thumb{display:block} .prog-row{min-height:64px} }
+@media(max-width:999px){
+  .coach{height:auto}
+  .coach-inner{display:grid}
+  .cface{position:relative;inset:auto;grid-area:1/1}
+  .cfront{min-height:420px}
+  .cfront img{position:absolute;inset:0}
+  .coach{cursor:pointer}
+}
+@media(max-width:860px){
+  .story-q{display:flex;flex-direction:column}
+  .story-who{order:-1;margin-bottom:1.4rem}
+  .story-who img{width:100%;height:auto;aspect-ratio:16/10}
+  .story-q blockquote{max-width:none}
+}
+@media(max-width:760px){
+  section{padding:4.5rem 0}
+  .hero-inner{padding-bottom:190px}
+  .hero-meta{margin-bottom:1.6rem}
+  .sn-full{display:none}.sn-short{display:inline}
+  .hero h1{font-size:clamp(3rem,16vw,5rem)}
+  .reel-hud .hud-sec,#soundBtn{display:none}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:.6rem}
+  .hero-cta .btn{justify-content:center;min-height:48px;font-size:.74rem}
+  .hero-cta .btn-orange{width:100%}
+  .manifesto h2,.sec-title,.book h2{font-size:clamp(2rem,9.5vw,2.8rem);line-height:.95;max-width:none}
+  .manifesto-grid{margin-bottom:2.6rem}
+  .cfront{min-height:380px}
+  .frow{grid-template-columns:1fr;gap:0}
+  .field input,.field select,.field textarea{font-size:16px}
+  .field label,.err-msg{font-size:.68rem}
+  .form-panel{padding:1.4rem}
+  .book-grid{gap:2.2rem}
+  .book h2{margin-bottom:1.4rem}
+  .rc-sub,.pg-tag,.form-fine,.foot-bottom,.cplate .hint,.cplate .role,.stat .lbl,.hnote{font-size:.66rem}
+  #menuBtn,#menuClose{width:44px;height:44px}
+  .socials button{width:44px;height:44px}
+  .ctrl-btn{width:48px;height:48px}
+  .car-segs button{height:4px}
+  .foot-bottom{padding-bottom:calc(1.4rem + env(safe-area-inset-bottom))}
+  #stickyBar{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));background:none;border:none;backdrop-filter:none}
+  #stickyBar .container{width:100%;padding:0}
+  #stickyBar .msg{display:none}
+  #stickyBar .btn{width:100%;justify-content:center;min-height:48px;animation:none}
+  .container,.hero,.pg-grid,.car-viewport{max-width:100%}
+}

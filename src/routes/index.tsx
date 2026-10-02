@@ -87,7 +87,7 @@ const html = `<!-- grain layers -->
   </div>
 
   <div class="reel-hud">
-    <span class="hud-chip"><span class="dot"></span> INTERACTION FIELD — DATA · OBJECT · HUMAN<span hidden id="reelNow"></span><span hidden id="reelTotal"></span></span>
+    <span class="hud-chip"><span class="dot"></span> INTERACTION FIELD<span class="hud-sec"> — DATA · OBJECT · HUMAN</span><span hidden id="reelNow"></span><span hidden id="reelTotal"></span></span>
     <span class="hud-chip tc-chip">TC <span id="tc">00:00:00:00</span></span>
     <button class="hud-chip" id="soundBtn" aria-label="Toggle ambient reel sound"><i data-lucide="volume-x"></i><span>SOUND</span></button>
   </div>
