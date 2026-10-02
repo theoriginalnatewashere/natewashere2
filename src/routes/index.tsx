@@ -396,6 +396,8 @@ function Index() {
       await loadScript("/site/content.js");
       await loadScript("/site/projects.js");
       await loadScript("/site/app.js");
+      if (cancelled) return;
+      await loadScript("/site/mosaic.js");
     })();
     return () => {
       cancelled = true;
