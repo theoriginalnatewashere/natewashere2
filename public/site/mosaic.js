@@ -28,21 +28,15 @@
   // cascade (upper-left → centre), small = reactive
   add(.066, .05, .5, .5, .5, 'yel', 0, 1.6);
   add(.1, .08, .7, .7, .7, 'pea', 0, 1.5);
-  add(.12, .12, .6, .6, .6, 'yel', 0, 1.6);
   add(.148, .16, .9, .9, .9, 'cya', 1, 1.4);
   add(.178, .125, 1.1, 1.1, 1.1, 'pea', 0, 1.3);
-  add(.19, .21, .7, .7, .7, 'yel', 1, 1.5);
-  add(.225, .205, 1.6, 1.6, 1.6, 'yel', 1, 1.1);
   add(.293, .2, 1, 1, 1, 'cya', 0, 1.4);
-  add(.265, .295, 1.6, 1.6, 1.6, 'yelB', 1, 1.1);
   add(.32, .26, .8, .8, .8, 'cya', 1, 1.4);
-  add(.368, .265, 1.7, 1.7, 1.7, 'yel', 1, 1.0);
-  add(.35, .37, 1.7, 1.7, 1.7, 'pea', 2, 1.0);
+  add(.5, .22, 1.2, 1.2, 1.2, 'yel', 1, 1.0);
   add(.415, .32, .9, .9, .9, 'cya', 2, 1.3);
   add(.48, .315, 1.6, 1.6, 1.6, 'yel', 1, 1.0);
-  add(.455, .425, 1.5, 1.5, 1.5, 'cor', 2, 1.0);
-  add(.42, .49, 2.4, 2.4, 2.2, 'yelB', 2, .9);
-  add(.5, .6, 1.5, 1.5, 1.5, 'yelB', 2, 1.1);
+  add(.56, .42, 1.5, 1.5, 1.5, 'cor', 2, 1.0);
+  add(.56, .62, 1.5, 1.5, 1.5, 'yelB', 2, 1.1);
   add(.53, .51, 2.6, 2.6, 2.4, 'cya', 2, .8);
   add(.505, .51, 1.5, 3.4, 3, 'blu', 2, .7);
   add(.6, .39, 2.5, 2.5, 2.6, 'yel', 1, .8);
@@ -70,7 +64,7 @@
   add(1.04, .4, 4, 3, 2.6, 'cor', 0, .3);
   add(.67, .44, 1.2, 1.2, 1.2, 'cya', 0, .9);
 
-  for (const b of B) { b.ox = 0; b.oy = 0; b.vx = 0; b.vy = 0; b.lz = 0; b.vz = 0; b.ph = Math.random() * 6.28; }
+  for (const b of B) { b.ox = 0; b.oy = 0; b.vx = 0; b.vy = 0; b.lz = 0; b.vz = 0; b.ph = Math.random() * 6.28; b.drift = b.w <= 1 && b.x < .45; }
 
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const coarse = matchMedia('(pointer: coarse)');
@@ -138,8 +132,8 @@
     raf = 0;
     const t = (now - t0) / 1000;
     const tablet = W < 1100;
-    const radius = (tablet ? 170 : 260);
-    const push = (tablet ? 34 : 56);
+    const radius = (tablet ? 130 : 200);
+    const push = (tablet ? 10 : 18);
     const physics = !coarse.matches;
     let moving = false;
     for (const b of B) {
@@ -150,14 +144,14 @@
         const dx = cx - mouse.x, dy = cy - mouse.y, dist = Math.hypot(dx, dy) || 1;
         const f = Math.min(1, Math.max(0, 1 - dist / radius));
         const k = f * f * push * b.s * LAYER[b.layer];
-        tx = dx / dist * k; ty = dy / dist * k; tz = f * 10 * b.s * LAYER[b.layer];
+        tx = dx / dist * k; ty = dy / dist * k; tz = f * 4 * b.s * LAYER[b.layer];
       }
       // very subtle drift along bottom-right → upper-left flow
-      const dr = Math.sin(t * .5 + b.ph) * 2.2 * LAYER[b.layer] * b.s;
+      const dr = b.drift ? Math.sin(t * .25 + b.ph) * 1.6 * b.s : 0;
       tx -= dr * COS; ty -= dr * .5;
-      b.vx = (b.vx + (tx - b.ox) * .08) * .82;
-      b.vy = (b.vy + (ty - b.oy) * .08) * .82;
-      b.vz = (b.vz + (tz - b.lz) * .08) * .82;
+      b.vx = (b.vx + (tx - b.ox) * .05) * .8;
+      b.vy = (b.vy + (ty - b.oy) * .05) * .8;
+      b.vz = (b.vz + (tz - b.lz) * .05) * .8;
       b.ox += b.vx; b.oy += b.vy; b.lz += b.vz;
       moving = true;
     }
