@@ -198,6 +198,7 @@ function setSound(on){
       <div>
         <p>${p.summary}</p>
         ${p.tags&&p.tags.length?`<div class="row-tags">${chips(p.tags)}</div>`:''}
+        <img class="prog-thumb" src="${p.thumb}" alt="" loading="lazy">
         <a class="btn btn-ghost btn-sm" href="#/work/${p.slug}">View Project <i data-lucide="arrow-right"></i></a>
       </div>
       <div class="prog-meta">
@@ -471,7 +472,8 @@ function loop(){
     }
     nav.classList.toggle('solid',sy>40);
     const menuOpen=document.body.classList.contains('menu-open');
-    sticky.classList.toggle('show',sy>innerHeight*.75&&!contactInView&&!menuOpen);
+    const ctEl=document.getElementById('contact');const pastContact=ctEl&&ctEl.offsetParent&&ctEl.getBoundingClientRect().top<innerHeight;
+    sticky.classList.toggle('show',sy>innerHeight*.75&&!contactInView&&!pastContact&&!menuOpen);
     pImgs.forEach(img=>{
       const r=img.parentElement.getBoundingClientRect();
       if(r.bottom<0||r.top>innerHeight)return;
