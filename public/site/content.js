@@ -13,7 +13,7 @@ const SITE = {
     chip2: "INDUSTRIAL PRODUCT · DATA · UX",
     chip3: "SELECTED WORK — 4 PROJECTS",
     title1Html: 'NATEWASHERE<i class="h-o">.</i>',
-    title2: "NATHAN",
+    title2: "NETHAN",
     title3Html: 'SUPAKITCHUMNAN<i class="h-o">.</i>',
     sub: "Designing how people, objects, data, and intelligent systems interact. Nathan explores how AI-enabled capabilities can reshape the way we use physical products and digital experiences alike."
   },
