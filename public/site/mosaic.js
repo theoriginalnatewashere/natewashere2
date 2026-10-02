@@ -104,7 +104,7 @@
   function resize() {
     const r = hero.getBoundingClientRect();
     W = r.width; H = r.height; dpr = Math.min(devicePixelRatio || 1, 2);
-    U = Math.max(H, W * .5) / 36;
+    U = Math.max(H, W * .5) / 28;
     canvas.width = W * dpr; canvas.height = H * dpr;
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
     // keep composition right-weighted on narrow screens
