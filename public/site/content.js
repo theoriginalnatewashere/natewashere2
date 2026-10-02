@@ -10,12 +10,12 @@ const SITE = {
 
   hero: {
     chip1: "SITE REBUILD IN PROGRESS",
-    chip2: "DESIGNER & BUILDER",
+    chip2: "INDUSTRIAL PRODUCT · DATA · UX",
     chip3: "SELECTED WORK — 4 PROJECTS",
     title1Html: 'NATEWASHERE<i class="h-o">.</i>',
     title2: "NATHAN",
     title3Html: 'SUPAKITCHUMNAN<i class="h-o">.</i>',
-    sub: "Nathan Supakitchumnan — designer and builder. What follows is an index into the work: selected projects first, then process, experiments, and a way in."
+    sub: "Designing how people, objects, data, and intelligent systems interact. Nathan explores how AI-enabled capabilities can reshape the way we use physical products and digital experiences alike."
   },
 
   marquee: [
@@ -29,8 +29,8 @@ const SITE = {
 
   about: {
     titleHtml: 'NATE MAKES THINGS —<br>THEN FIGURES OUT<br><span class="hl">WHY THEY WORK.</span>',
-    paragraph1Html: '<b>Short biography goes here</b> — two or three sentences on who Nathan is, the kind of work he does, and the problems he likes to sit with. Source it from the existing CV and About page.',
-    paragraph2: "A second paragraph goes here — how he approaches problems, and what makes the combination of skills and experience distinctive. Keep it concise; this homepage stays project-first."
+    paragraph1Html: '<b>Nathan Supakitchumnan</b> is an industrial product, data-driven, and UX designer. His work sits where physical objects, information, and interfaces meet.',
+    paragraph2: "He is interested in how AI-enabled capabilities can redefine human/object interaction — and in testing those ideas with real people before they harden into products. (Editable — refine with CV details.)"
   },
 
   capabilities: [
@@ -109,7 +109,7 @@ const SITE = {
 
   contact: {
     titleHtml: 'GOT A PROBLEM <em>WORTH SOLVING?</em>',
-    intro: "A short paragraph goes here — the kinds of projects, roles, and conversations Nathan is open to, in his own words. Until then: the form works, and the address below is the direct route.",
+    intro: "Open to conversations about industrial product, data, and UX work — especially where physical and digital meet. Use the form or email directly.",
     email: "hello@natewashere.com"
   },
 
