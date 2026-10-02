@@ -519,3 +519,4 @@ body.route-project #ppRoot{display:block}
   #stickyBar .btn{width:100%;justify-content:center;min-height:48px;animation:none}
   .container,.hero,.pg-grid,.car-viewport{max-width:100%}
 }
+@media (pointer:coarse){ .hero-cta .btn,.btn-sm{min-height:44px} .prog-ico{width:44px;height:44px} }
