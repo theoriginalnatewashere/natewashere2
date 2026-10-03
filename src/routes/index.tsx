@@ -68,8 +68,8 @@ const html = `<!-- grain layers -->
 <!-- mobile menu -->
 <div id="menu" aria-hidden="true">
   <button id="menuClose" aria-label="Close menu"><i data-lucide="x"></i></button>
-  <a class="m-link" href="#work"><i>01</i>Work</a>
-  <a class="m-link" href="#about"><i>02</i>About</a>
+  <a class="m-link" href="#about"><i>01</i>About</a>
+  <a class="m-link" href="#work"><i>02</i>Work</a>
   <a class="m-link" href="#playground"><i>03</i>Playground</a>
   <a class="m-link" href="#" data-cv><i>04</i>CV</a>
   <a class="m-link" href="#contact"><i>05</i>Contact</a>
@@ -103,7 +103,7 @@ const html = `<!-- grain layers -->
       <span class="h-line"><span class="h-outline" id="heroTitle2">NATHAN</span></span>
       <span class="h-line"><span id="heroTitle3">SUPAKITCHUMNAN<i class="h-o">.</i></span></span>
     </h1>
-    <p class="hero-sub" id="heroSub">Nathan Supakitchumnan — designer and builder. What follows is an index into the work: selected projects first, then process, experiments, and a way in.</p>
+    <p class="hero-sub" id="heroSub">Nathan Supakitchumnan — designer and builder. What follows is an index into the work: who he is, then selected projects, process, experiments, and a way in.</p>
     <div class="hero-cta">
       <a class="btn btn-orange" href="#work">View Selected Work <i data-lucide="arrow-down"></i></a>
       <a class="btn btn-ghost" href="#about">About Me <i data-lucide="arrow-right"></i></a>
@@ -130,35 +130,16 @@ const html = `<!-- grain layers -->
     </div>
 </div>
 
-<!-- ============ SELECTED WORK ============ -->
-<section id="work">
-  <div class="container">
-    <div class="sec-head" data-reveal>
-      <div>
-        <div class="kicker"><b>01</b> SELECTED WORK</div>
-        <h2 class="sec-title display">SELECTED <em>WORK.</em></h2>
-      </div>
-      <p class="sec-note">Rows expand. Images follow the cursor. Every project opens on its own page.</p>
-    </div>
-
-    <!-- Project rows injected from PROJECTS data -->
-    <div class="prog-list" id="workList" data-reveal style="--d:.1s"></div>
-  </div>
-</section>
-
-<!-- floating project preview -->
-<div id="progFloat"><img id="progFloatImg" class="bw" src="" alt=""></div>
-
 <!-- ============ ABOUT ============ -->
 <section class="manifesto" id="about">
   <div class="container">
-    <div class="kicker" data-reveal><b>02</b> ABOUT</div>
+    <div class="kicker" data-reveal><b>01</b> ABOUT</div>
     <div class="manifesto-grid">
       <h2 class="display" data-reveal id="aboutTitle">NATE MAKES THINGS —<br>THEN FIGURES OUT<br><span class="hl">WHY THEY WORK.</span></h2>
       <div class="manifesto-copy" data-reveal style="--d:.15s">
         <!-- PLACEHOLDER BIO — replace both paragraphs with verified copy from the existing CV / About page -->
         <p id="aboutP1"><b>Short biography goes here</b> — two or three sentences on who Nathan is, the kind of work he does, and the problems he likes to sit with. Source it from the existing CV and About page.</p>
-        <p id="aboutP2">A second paragraph goes here — how he approaches problems, and what makes the combination of skills and experience distinctive. Keep it concise; this homepage stays project-first.</p>
+        <p id="aboutP2">A second paragraph goes here — how he approaches problems, and what makes the combination of skills and experience distinctive. Keep it concise; selected work follows below.</p>
         <div class="about-btns">
           <button class="btn btn-ghost btn-sm" data-todo="Full About page goes here — link it once it exists">Read More <i data-lucide="arrow-right"></i></button>
           <button class="btn btn-orange btn-sm" data-todo="CV goes here — drop the file into the project and link it up">View Full CV <i data-lucide="arrow-right"></i></button>
@@ -174,6 +155,25 @@ const html = `<!-- grain layers -->
     </div>
   </div>
 </section>
+
+<!-- ============ SELECTED WORK ============ -->
+<section id="work">
+  <div class="container">
+    <div class="sec-head" data-reveal>
+      <div>
+        <div class="kicker"><b>02</b> SELECTED WORK</div>
+        <h2 class="sec-title display">SELECTED <em>WORK.</em></h2>
+      </div>
+      <p class="sec-note">Rows expand. Images follow the cursor. Every project opens on its own page.</p>
+    </div>
+
+    <!-- Project rows injected from PROJECTS data -->
+    <div class="prog-list" id="workList" data-reveal style="--d:.1s"></div>
+  </div>
+</section>
+
+<!-- floating project preview -->
+<div id="progFloat"><img id="progFloatImg" class="bw" src="" alt=""></div>
 
 <!-- ═══ PLACEHOLDER IMAGE — swap for a real portrait / studio shot ═══ -->
 <div class="band">
