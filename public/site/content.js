@@ -12,8 +12,8 @@ const SITE = {
     chip1: "SITE REBUILD IN PROGRESS",
     chip2: "PRODUCT / DATA / UX",
     chip3: "HUMAN × OBJECT × SYSTEM",
-    title1Html: 'NATEWASHERE<i class="h-o">.</i>',
-    title2: "NATHAN",
+    title1Html: 'DATA➕HUMAN<i class="h-o">.</i>',
+    title2: "NETHAN",
     title3Html: '<span class="sn-full">SUPAKITCHUMNAN</span><span class="sn-short">SU</span><i class="h-o">.</i>',
     sub: ""
   },
@@ -28,9 +28,9 @@ const SITE = {
   ],
 
   about: {
-    titleHtml: 'NATE MAKES THINGS —<br>THEN FIGURES OUT<br><span class="hl">WHY THEY WORK.</span>',
-    paragraph1Html: '<b>Nathan Supakitchumnan</b> is an industrial product, data-driven, and UX designer. His work sits where physical objects, information, and interfaces meet.',
-    paragraph2: "He is interested in how AI-enabled capabilities can redefine human/object interaction — and in testing those ideas with real people before they harden into products. (Editable — refine with CV details.)"
+    titleHtml: 'TURN DATA INTO BETTER EXPERIENCES&nbsp;<br><span class="hl">INSIGHT TO PRODUCTS.</span>',
+    paragraph1Html: '<b>Nethan Supakitchumnan</b> is an industrial product, data-driven, and UX designer. His work sits where physical objects, information, and interfaces meet.',
+    paragraph2: "He is interested in how AI-enabled capabilities can redefine human/object interaction — and in testing those ideas with real people before they harden into products. He is especially interested in how people with objects, interfaces and systems behind them"
   },
 
   capabilities: [
