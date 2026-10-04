@@ -186,7 +186,7 @@
 
   new IntersectionObserver(([en]) => { visible = en.isIntersecting; kick(); }).observe(hero);
   document.addEventListener('visibilitychange', () => { visible = !document.hidden; kick(); });
-  reduce.addEventListener?.('change', () => { for (const b of B) { b.ox = b.oy = b.lz = 0; } draw(); kick(); });
+  reduce.addEventListener?.('change', () => { for (const b of B) { b.ox = b.oy = b.lz = b.rot = 0; } draw(); kick(); });
   addEventListener('resize', resize);
   resize();
   kick();
