@@ -415,11 +415,31 @@ function renderProject(idx){
       <h2 class="display pp-h2" data-reveal>ABOUT THE<br>PROJECT</h2>
       <div class="pp-body" data-reveal style="--d:.1s">${p.description.map(t=>`<p>${t}</p>`).join('')}</div>
     </div>`:''}
+    ${p.explorations&&p.explorations.length?`
+    <h2 class="display pp-h2" data-reveal>SELECTED EXPLORATIONS</h2>
+    <div class="pp-explore">
+      ${p.explorations.map((x,j)=>`<article class="pp-ex" data-reveal>
+        <figure><img class="bw" src="${x.image}" alt="${x.title} dashboard screenshot" loading="lazy"></figure>
+        <span class="mono pp-ex-n">0${j+1}</span>
+        <h3>${x.title}</h3>
+        <p class="pp-ex-q">${x.question}</p>
+        <p>${x.description}</p>
+        <div class="pp-ex-links">
+          ${x.live?`<a class="btn btn-orange btn-sm" href="${x.live}" target="_blank" rel="noopener noreferrer">Explore Live Dashboard ↗</a>`:''}
+          ${x.code?`<a class="btn btn-ghost btn-sm" href="${x.code}" target="_blank" rel="noopener noreferrer">View Code ↗</a>`:''}
+        </div>
+      </article>`).join('')}
+    </div>`:''}
     ${p.gallery&&p.gallery.length?`
     <h2 class="display pp-h2" data-reveal>GALLERY</h2>
     <div class="pp-gallery">
-      ${p.gallery.map(g=>`<figure data-reveal><img class="bw" src="${g.src}" alt="${g.cap||'Project image'}"><figcaption>${g.cap||''}</figcaption></figure>`).join('')}
+      ${p.gallery.map(g=>`<figure data-reveal><img class="bw" src="${g.src}" alt="${g.cap||'Project image'}" loading="lazy"><figcaption>${g.cap||''}</figcaption></figure>`).join('')}
     </div>`:''}
+    ${p.approach&&p.approach.length?`
+    <h2 class="display pp-h2" data-reveal>APPROACH</h2>
+    <ol class="pp-approach mono" data-reveal>${p.approach.map((s,j)=>`<li><b>0${j+1}</b>${s}</li>`).join('')}</ol>`:''}
+    ${p.links&&p.links.length?`
+    <div class="pp-links" data-reveal>${p.links.map(l=>`<a class="btn btn-ghost btn-sm" href="${l.href}" target="_blank" rel="noopener noreferrer">${l.label} ↗</a>`).join('')}</div>`:''}
     <nav class="pp-nav" aria-label="Project navigation">
       ${prev?`<a class="ppn" href="#/work/${prev.slug}"><span class="k"><i data-lucide="arrow-left"></i> PREVIOUS</span><span class="t">${prev.title}</span><span class="s">${prev.category} · ${prev.year}</span></a>`:'<span></span>'}
       ${next?`<a class="ppn ppn-r" href="#/work/${next.slug}"><span class="k">NEXT <i data-lucide="arrow-right"></i></span><span class="t">${next.title}</span><span class="s">${next.category} · ${next.year}</span></a>`:'<span></span>'}
