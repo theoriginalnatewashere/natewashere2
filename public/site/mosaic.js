@@ -114,9 +114,12 @@
     const L = [ox - w * COS, oy - w * .5], R = [ox + d * COS, oy - d * .5];
     const c = C[b.color];
     const face = (pts, col) => { ctx.fillStyle = col; ctx.beginPath(); pts.forEach(([x, y], i) => i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)); ctx.closePath(); ctx.fill(); };
+    const rot = b.rot || 0;
+    if (Math.abs(rot) > .0005) { ctx.save(); ctx.translate(ox, oy - h * .5); ctx.rotate(rot); ctx.translate(-ox, -(oy - h * .5)); }
     face([[ox, oy], L, [L[0], L[1] - h], [ox, oy - h]], c[1]);
     face([[ox, oy], R, [R[0], R[1] - h], [ox, oy - h]], c[2]);
     face([[ox, oy - h], [L[0], L[1] - h], [L[0] + R[0] - ox, L[1] + R[1] - oy - h], [R[0], R[1] - h]], c[0]);
+    if (Math.abs(rot) > .0005) ctx.restore();
   }
 
   const order = B.slice().sort((a, b) => (a.y - b.y) || (a.x - b.x));
@@ -126,33 +129,47 @@
     for (const b of order) prism(b);
   }
 
-  const LAYER = [.35, .7, 1];
-  let t0 = performance.now(), visible = true, raf = 0;
+  const LAYER = [.55, .8, 1];
+  // max displacement (px, desktop) by size class: small / medium / large
+  const sizeMax = (b) => { const m = Math.max(b.w, b.d, b.h * .8); return m <= 1.2 ? 42 : m <= 2.6 ? 22 : 11; };
+  for (const b of B) { b.max = sizeMax(b); b.rot = 0; b.vr = 0; b.heat = 0; }
+  let t0 = performance.now(), visible = true, raf = 0, last = t0;
   function step(now) {
     raf = 0;
     const t = (now - t0) / 1000;
+    const dt = Math.min(.05, (now - last) / 1000); last = now;
     const tablet = W < 1100;
-    const radius = (tablet ? 130 : 200);
-    const push = (tablet ? 10 : 18);
+    const radius = tablet ? 165 : 250;
+    const scale = tablet ? .75 : 1;
     const physics = !coarse.matches;
     let moving = false;
     for (const b of B) {
-      let tx = 0, ty = 0, tz = 0;
+      let tx = 0, ty = 0, tz = 0, tr = 0, f = 0;
       const narrow = W < 760;
       const cx = (narrow ? .3 + b.x * .75 : b.x) * W, cy = b.y * H - b.h * U * .5;
       if (physics && mouse.on) {
         const dx = cx - mouse.x, dy = cy - mouse.y, dist = Math.hypot(dx, dy) || 1;
-        const f = Math.min(1, Math.max(0, 1 - dist / radius));
-        const k = f * f * push * b.s * LAYER[b.layer];
-        tx = dx / dist * k; ty = dy / dist * k; tz = f * 4 * b.s * LAYER[b.layer];
+        const r = Math.min(1, Math.max(0, 1 - dist / radius));
+        f = r * r * (3 - 2 * r); // smooth falloff: core → influence → outside
+        const core = Math.max(0, (f - .55) / .45); // only nearest blocks
+        const k = f * b.max * scale * LAYER[b.layer];
+        tx = dx / dist * k; ty = dy / dist * k;
+        tz = core * (b.max * .18) * scale;
+        tr = core * (b.max > 30 ? 5 : b.max > 15 ? 3.5 : 2) * Math.sign(dx) * Math.PI / 180;
       }
-      // very subtle drift along bottom-right → upper-left flow
+      // wake: recently affected blocks recover more slowly (~400ms extra)
+      b.heat = Math.max(f, b.heat - dt * 2.2);
+      // very subtle drift on a few small cubes (unchanged)
       const dr = b.drift ? Math.sin(t * .25 + b.ph) * (coarse.matches || W < 760 ? .5 : 1.6) * b.s : 0;
       tx -= dr * COS; ty -= dr * .5;
-      b.vx = (b.vx + (tx - b.ox) * .05) * .8;
-      b.vy = (b.vy + (ty - b.oy) * .05) * .8;
-      b.vz = (b.vz + (tz - b.lz) * .05) * .8;
-      b.ox += b.vx; b.oy += b.vy; b.lz += b.vz;
+      const outward = (tx * tx + ty * ty) > (b.ox * b.ox + b.oy * b.oy);
+      const kS = outward ? .16 : .045 * (1 - .55 * b.heat);
+      const dmp = outward ? .74 : .84;
+      b.vx = (b.vx + (tx - b.ox) * kS) * dmp;
+      b.vy = (b.vy + (ty - b.oy) * kS) * dmp;
+      b.vz = (b.vz + (tz - b.lz) * kS) * dmp;
+      b.vr = (b.vr + (tr - b.rot) * kS) * dmp;
+      b.ox += b.vx; b.oy += b.vy; b.lz += b.vz; b.rot += b.vr;
       moving = true;
     }
     draw();
@@ -169,7 +186,7 @@
 
   new IntersectionObserver(([en]) => { visible = en.isIntersecting; kick(); }).observe(hero);
   document.addEventListener('visibilitychange', () => { visible = !document.hidden; kick(); });
-  reduce.addEventListener?.('change', () => { for (const b of B) { b.ox = b.oy = b.lz = 0; } draw(); kick(); });
+  reduce.addEventListener?.('change', () => { for (const b of B) { b.ox = b.oy = b.lz = b.rot = 0; } draw(); kick(); });
   addEventListener('resize', resize);
   resize();
   kick();
