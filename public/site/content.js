@@ -41,8 +41,8 @@ const SITE = {
       description: "Framing fuzzy problems into flows, interfaces, and systems — then pressure-testing them with real people before anything gets built.",
       bullets: ["Flows, wireframes & specs", "Interface systems & states", "Usability testing rounds"],
       featuredLabel: "Featured Work",
-      featuredText: "Untitled 01 — product design case study",
-      href: "#/work/untitled-01",
+      featuredText: "Designing Data Autonomy — thesis case study",
+      href: "#/work/designing-data-autonomy",
       cta: "See the Work"
     },
     {
@@ -52,8 +52,8 @@ const SITE = {
       description: "Asking better questions before jumping to solutions — interviews, observations, and synthesis that turn opinions into evidence a team can act on.",
       bullets: ["Interviews & field sessions", "Usability testing", "Synthesis & findings"],
       featuredLabel: "Featured Work",
-      featuredText: "Untitled 02 — research-led case study",
-      href: "#/work/untitled-02",
+      featuredText: "WasteNot — research-led case study",
+      href: "#/work/wastenot",
       cta: "See the Work"
     },
     {
@@ -63,8 +63,8 @@ const SITE = {
       description: "Making ideas touchable early — from paper sketches to clickable builds — so decisions get made with something real in the room, not a slide.",
       bullets: ["Sketches & flow maps", "Clickable prototypes", "Design–code handoff"],
       featuredLabel: "Featured Work",
-      featuredText: "Untitled 03 — prototype",
-      href: "#/work/untitled-03",
+      featuredText: "Emergency Dispatcher AI Chatbot — prototype",
+      href: "#/work/emergency-dispatcher-ai-chatbot",
       cta: "See the Work"
     },
     {
