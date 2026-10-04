@@ -107,7 +107,7 @@ const mq=$('#mqTrack');mq.innerHTML+=mq.innerHTML;
 /* ---------- build project reel (data-driven, clickable slides) ---------- */
  $('#reel').insertAdjacentHTML('afterbegin',PROJECTS.filter(p=>p.featured).map((p,i)=>`
   <a class="reel-shot${i===0?' is-active':''}" href="#/work/${p.slug}" aria-label="Open project: ${p.title}">
-    <img class="bw" src="${p.heroImage}" alt="Preview of ${p.title} — placeholder project image">
+    <img class="bw" src="${p.heroImage}" alt="Preview of ${p.title}">
     <span class="reel-cap">
       <span class="rc-top">0${i+1} — ${p.title}</span>
       <span class="rc-sub">${p.category} · ${p.year}</span>
@@ -407,7 +407,7 @@ function renderProject(idx){
       ${metaRow('Client',p.client)}
       ${metaRow('Status',p.status)}
     </div>
-    <figure class="pp-hero" data-reveal><img class="bw" src="${p.heroImage}" alt="Hero image for ${p.title} — placeholder"></figure>
+    <figure class="pp-hero" data-reveal><img class="bw" src="${p.heroImage}" alt="Hero image for ${p.title}"></figure>
     <p class="pp-lede" data-reveal>${p.summary}</p>
     ${p.tags&&p.tags.length?`<div class="pp-tags" data-reveal>${chips(p.tags)}</div>`:''}
     ${p.description&&p.description.length?`
