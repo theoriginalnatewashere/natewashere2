@@ -608,3 +608,7 @@ body.route-project #ppRoot{display:block}
   .iw-slide .iw-fig{order:5}.iw-move{order:6;margin-top:0}.iw-link{order:7;margin-top:0;justify-self:start}
   .iw-fig img{aspect-ratio:16/10;filter:none}
 }
+/* How I Work — focus + reduced motion */
+.coach:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
+.coach:focus-visible .coach-inner{transform:rotateY(180deg)}
+@media (prefers-reduced-motion:reduce){.coach-inner{transition:none!important}}
