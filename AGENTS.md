@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Deployment
+- Homepage is prerendered at build time (vite.config.ts `pages` + `prerender`) so `.output/public` deploys as a static site — keep routes free of per-request/server-only data.
+- Site images live in `public/site/img/`, not Lovable-hosted asset URLs — they must ship inside the static output for non-Lovable hosts.
