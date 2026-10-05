@@ -327,10 +327,9 @@ const html = `<!-- grain layers -->
         </a>
         <p id="footerBlurb">Portfolio of Nathan Supakitchumnan — designer and builder. Work first, always.</p>
         <div class="socials">
-          <!-- PLACEHOLDER — replace with verified social URLs -->
-          <button data-social="LinkedIn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></button>
-          <button data-social="Instagram" aria-label="Instagram"><i data-lucide="instagram"></i></button>
-          <button data-social="GitHub" aria-label="GitHub"><i data-lucide="github"></i></button>
+          <a href="https://www.linkedin.com/in/nethansu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="https://substack.com/@natewashere26" target="_blank" rel="noopener noreferrer" aria-label="Substack"><svg class="substack" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.079zM1.46 10.532V21.74l10.54-7.155 10.539 7.155V10.532zM22.539 2.792H1.46V0h21.079z"/></svg></a>
+          <a href="https://github.com/theoriginalnatewashere" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
         </div>
       </div>
       <div>

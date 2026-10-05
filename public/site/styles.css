@@ -395,9 +395,10 @@ footer{border-top:1px solid var(--line);padding:4.5rem 0 0;overflow:hidden}
 .foot-grid a:hover{color:var(--orange)}
 .foot-brand p{color:var(--muted);font-size:.85rem;max-width:30ch;margin:1rem 0 1.4rem}
 .socials{display:flex;gap:.7rem}
-.socials button{width:40px;height:40px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--silver);transition:border-color .25s,color .25s}
-.socials button:hover{border-color:var(--orange);color:var(--orange)}
+.socials a{width:40px;height:40px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--silver);transition:border-color .25s,color .25s}
+.socials a:hover,.socials a:focus-visible{border-color:var(--orange);color:var(--orange);outline:none}
 .socials svg{width:16px;height:16px}
+.socials svg.substack{width:14px;height:14px}
 .foot-bottom{border-top:1px solid var(--line-soft);padding:1.4rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
   font-family:'IBM Plex Mono',monospace;font-size:.6rem;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
 
