@@ -48,9 +48,17 @@ function renderEditableContent(){
 
   const pg=document.getElementById('playgroundGrid');
   if(pg&&Array.isArray(SITE.playground))pg.innerHTML=SITE.playground.map(x=>`
-    <a class="pg-card" href="${x.href||'#'}"${x.todo?` data-todo="${x.todo.replace(/"/g,'&quot;')}"`:''}>
-      <span class="pg-media"><img class="bw" src="${x.image}" alt="${x.title}"></span>
-      <span class="pg-body"><span class="pg-tag">${x.tag||'Experiment'}</span><span class="pg-title">${x.title}</span><span class="pg-txt">${x.text||''}</span><span class="pg-arrow">Open <i data-lucide="arrow-up-right"></i></span></span>
+    <a class="pg-card" href="${x.href}" target="_blank" rel="noopener noreferrer" aria-label="${x.title} — open dashboard in a new tab">
+      <span class="pg-media"><img src="${x.image}" alt="${x.title} dashboard screenshot" loading="lazy"></span>
+      <span class="pg-body">
+        <span class="pg-top"><span class="pg-tag">${x.tag}</span><span class="pg-meta">${x.meta||''}</span></span>
+        <span class="pg-title">${x.title}</span>
+        <span class="pg-q">${x.question}</span>
+        <span class="pg-row"><b>What</b><span>${x.what}</span></span>
+        <span class="pg-row"><b>Why</b><span>${x.why}</span></span>
+        <span class="pg-row"><b>How</b><span class="pg-tags">${(x.how||[]).map(h=>`<i>${h}</i>`).join('')}</span></span>
+        <span class="pg-arrow">Open dashboard <i data-lucide="arrow-up-right"></i></span>
+      </span>
     </a>`).join('');
 }
 renderEditableContent();

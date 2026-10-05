@@ -82,28 +82,48 @@ const SITE = {
 
   playground: [
     {
-      tag: "Concept",
-      title: "Pick My Next Move",
-      text: "Playful pathfinder concept — illustrated adventure cards for choosing a next move.",
-      image: "https://picsum.photos/seed/nate-pg-1/800/600.jpg",
-      href: "#",
-      todo: "Pick My Next Move — link the live /hire experience here"
+      tag: "Investigation 01",
+      title: "AI Job Postings",
+      question: "How fast has demand for AI skills grown in job postings across countries?",
+      what: "Tracks the share of online job postings listing at least one AI skill across 22 countries, 2014–2025.",
+      why: "Headlines about AI jobs are loud; I wanted the measured trend, country by country, rather than the noise.",
+      how: ["Public data (Lightcast / OWID)", "Cleaning", "Time series", "Country comparison", "Visualization"],
+      meta: "22 COUNTRIES · 2014–2025",
+      image: "/__l5e/assets-v1/3d216929-6e0b-412a-aade-402151018278/pg-jobs.jpg",
+      href: "https://ai-job-postings.netlify.app"
     },
     {
-      tag: "Experiment",
-      title: "Untitled Experiment 01",
-      text: "Short description goes here — what it explores and why it was worth making.",
-      image: "https://picsum.photos/seed/nate-pg-2/800/600.jpg",
-      href: "#",
-      todo: "Playground destination goes here — link the live experiment"
+      tag: "Investigation 02",
+      title: "AI Skill Heatmap",
+      question: "Which AI skills do employers request for each type of role?",
+      what: "A 3D heat map of AI skills explicitly required or preferred across 14 role families, with linked listing evidence.",
+      why: "“AI skills” means different things to engineers, marketers and operators — I wanted to see how.",
+      how: ["Data collection", "Skill normalization", "Aggregation", "3D heat map", "Interactive filtering"],
+      meta: "1,095 LISTINGS · 5 JOB BOARDS",
+      image: "/__l5e/assets-v1/0fc24f91-4226-4afb-a1ac-23a97f06297d/pg-heat.jpg",
+      href: "https://aiskill-heatmap.nate-4f6.workers.dev"
     },
     {
-      tag: "Experiment",
-      title: "Untitled Experiment 02",
-      text: "Short description goes here — swap in real playground items from the existing portfolio.",
-      image: "https://picsum.photos/seed/nate-pg-3/800/600.jpg",
-      href: "#",
-      todo: "Playground destination goes here — link the live experiment"
+      tag: "Investigation 03",
+      title: "Junior Data Scientist",
+      question: "What do employers actually require of junior data scientists?",
+      what: "Breaks down technical skills, tools, experience and education across 30 verified live job postings.",
+      why: "Entry-level advice is often generic; reading the postings themselves gives a more honest picture.",
+      how: ["Data collection", "Manual verification", "Requirement coding", "Ranking", "Visualization"],
+      meta: "30 VERIFIED POSTINGS · SEP 2026",
+      image: "/__l5e/assets-v1/4ef5a840-62a7-41e5-98a1-20bed9c0e84a/pg-jds.jpg",
+      href: "https://junior-data-scientist.netlify.app"
+    },
+    {
+      tag: "Investigation 04",
+      title: "City Explorer",
+      question: "Which European cities perform similarly on quality of life?",
+      what: "Compares 391 European urban areas on environment, mobility, economy and survey-based wellbeing.",
+      why: "Choosing where to live is a multi-variable question; I wanted to see cities side by side.",
+      how: ["Public data (OECD / Eurostat)", "Percentile scoring", "Geographic analysis", "Comparison", "Interactive filtering"],
+      meta: "391 CITIES · OECD / EUROSTAT",
+      image: "/__l5e/assets-v1/56c5c26e-e993-4c51-bda3-7bc0e11dc63d/pg-city.jpg",
+      href: "https://city-explorer-dashboard.netlify.app"
     }
   ],
 

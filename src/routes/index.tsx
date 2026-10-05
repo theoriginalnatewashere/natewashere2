@@ -229,9 +229,9 @@ const html = `<!-- grain layers -->
     <div class="sec-head" data-reveal>
       <div>
         <div class="kicker"><b>05</b> PLAYGROUND</div>
-        <h2 class="sec-title display">SIDE QUESTS &amp; <em>EXPERIMENTS.</em></h2>
+        <h2 class="sec-title display">QUESTIONS IN <em>DATA.</em></h2>
       </div>
-      <p class="sec-note">Lighter work — concepts, prototypes, unfinished ideas. Selected Work stays the main event.</p>
+      <p class="sec-note">Small investigations into questions I was curious enough to pursue, using data, visualization, and interactive tools to look for answers.</p>
     </div>
 
     <div class="pg-grid" id="playgroundGrid" data-reveal style="--d:.1s"><!-- injected from content.js --></div>
