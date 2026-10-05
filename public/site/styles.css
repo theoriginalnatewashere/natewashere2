@@ -612,3 +612,25 @@ body.route-project #ppRoot{display:block}
 .coach:focus-visible{outline:2px solid var(--orange);outline-offset:4px}
 .coach:focus-visible .coach-inner{transform:rotateY(180deg)}
 @media (prefers-reduced-motion:reduce){.coach-inner{transition:none!important}}
+
+/* ═══════════ ABOUT PAGE (/about) ═══════════ */
+.ab-hero{padding:10rem 0 4.5rem;border-bottom:1px solid var(--line-soft)}
+.ab-title{font-size:clamp(2.8rem,8vw,7rem);margin-bottom:2.4rem}
+.ab-title em{font-style:normal;color:var(--orange)}
+.ab-lede{font-size:clamp(1.15rem,2.1vw,1.55rem);font-weight:600;line-height:1.45;max-width:38ch;margin-bottom:1.4rem}
+.ab-intro{color:var(--silver);max-width:62ch;font-size:.98rem;margin-bottom:1rem}
+.ab-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2.2rem}
+.ab-sec{padding:4.5rem 0;border-bottom:1px solid var(--line-soft)}
+.ab-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem}
+.ab-h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:14ch}
+.ab-body p{color:var(--silver);margin-bottom:1rem;max-width:62ch;font-size:.98rem}
+.ab-body p.ab-strong{color:var(--text);font-weight:600}
+.ab-quote{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.05;
+  border-left:2px solid var(--orange);padding:.2rem 0 .2rem 1.2rem;margin:1.6rem 0;max-width:24ch;color:var(--text)}
+.ab-list{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 1.6rem}
+.ab-cta{padding:5.5rem 0}
+.ab-cta-t{font-size:clamp(2.2rem,5.4vw,4.4rem);max-width:16ch;margin-bottom:1.6rem}
+.ab-cta-t em{font-style:normal;color:var(--orange)}
+.ab-cta-row{display:flex;gap:.8rem;flex-wrap:wrap}
+@media(max-width:860px){.ab-hero{padding:8rem 0 3.5rem}.ab-grid{grid-template-columns:1fr;gap:1.6rem}.ab-sec{padding:3.5rem 0}}
+@media(max-width:560px){.ab-cta-row .btn{width:100%;justify-content:center;min-height:48px}}
