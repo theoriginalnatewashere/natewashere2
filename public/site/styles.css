@@ -551,3 +551,20 @@ body.route-project #ppRoot{display:block}
   .pp-approach li::after{display:none}
   .pp-ex-links .btn{min-height:44px}
 }
+
+/* playground: compact 3-across desktop */
+@media(min-width:900px){
+  .pg-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+  .pg-media{aspect-ratio:16/8}
+  .pg-body{padding:.85rem 1rem 1rem;gap:.4rem}
+  .pg-tag,.pg-meta{font-size:.54rem;letter-spacing:.16em}
+  .pg-top{gap:.5rem}
+  .pg-title{font-size:1.15rem}
+  .pg-q{font-size:.85rem;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em;margin-bottom:.1rem}
+  .pg-row{grid-template-columns:2.6rem 1fr;gap:.5rem;font-size:.74rem;line-height:1.4;padding-top:.4rem}
+  .pg-row b{font-size:.52rem;padding-top:.15rem}
+  .pg-tags{gap:.25rem}
+  .pg-tags i{font-size:.56rem;padding:.12rem .38rem}
+  .pg-arrow{min-height:0;padding-top:.45rem;font-size:.56rem}
+}
+@media(max-width:899px){.pg-grid{grid-template-columns:1fr}}
