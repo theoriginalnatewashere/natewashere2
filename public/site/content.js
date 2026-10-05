@@ -37,7 +37,7 @@ const SITE = {
     {
       title: "FRAME",
       role: "Find the real problem.",
-      image: "/__l5e/assets-v1/6ffe8427-71d3-4b75-9c05-dc59b242fac4/01-frame.webp",
+      image: "/site/img/how-i-work/01-frame.webp",
       alt: "Problem framing with notes and system mapping on a wall.",
       description: "Map the system before designing the solution. Look at people, objects, constraints, incentives, information flows, and technology to understand where the real opportunity sits.",
       bullets: ["System Mapping", "Problem Framing", "Stakeholder Analysis"]
@@ -45,7 +45,7 @@ const SITE = {
     {
       title: "READ",
       role: "Let evidence change the question.",
-      image: "/__l5e/assets-v1/78477877-a9ac-40b9-9684-00217aa02bf3/02-read.webp",
+      image: "/site/img/how-i-work/02-read.webp",
       alt: "Reviewing charts and research data at a desk.",
       description: "Use interviews, observations, behavioral data, datasets, and experiments as material for understanding what matters—not simply as validation for an existing idea.",
       bullets: ["UX Research", "Data Analysis", "Behavioral Insight"]
@@ -53,7 +53,7 @@ const SITE = {
     {
       title: "MAKE",
       role: "Turn uncertainty into something tangible.",
-      image: "/__l5e/assets-v1/56353630-b598-4879-be36-4c046aa45a22/03-make.webp",
+      image: "/site/img/how-i-work/03-make.webp",
       alt: "Building and testing a physical electronic prototype.",
       description: "Build the quickest useful representation of an idea: sketches, interfaces, physical models, dashboards, AI experiments, or interactive prototypes.",
       bullets: ["Prototyping", "Interaction Design", "Experimentation"]
@@ -61,7 +61,7 @@ const SITE = {
     {
       title: "ADAPT",
       role: "Test how the system responds.",
-      image: "/__l5e/assets-v1/dc261fa1-99b8-46e3-bc68-1306dda5fbf1/04-adapt.webp",
+      image: "/site/img/how-i-work/04-adapt.webp",
       alt: "Evaluating a small prototype alongside a digital interface.",
       description: "Put the idea into use, observe what happens, learn from failures and unexpected behavior, then refine the product or system around what the evidence shows.",
       bullets: ["User Testing", "Iteration", "System Refinement"]
@@ -77,7 +77,7 @@ const SITE = {
       why: "“AI skills” means different things to engineers, marketers and operators.",
       how: ["Data collection", "Skill normalization", "3D heat map", "Filtering"],
       meta: "1,095 LISTINGS · 5 JOB BOARDS",
-      image: "/__l5e/assets-v1/0fc24f91-4226-4afb-a1ac-23a97f06297d/pg-heat.jpg",
+      image: "/site/img/playground/pg-heat.jpg",
       href: "https://aiskill-heatmap.nate-4f6.workers.dev"
     },
     {
@@ -88,7 +88,7 @@ const SITE = {
       why: "Entry-level advice is generic; the postings themselves are more honest.",
       how: ["Data collection", "Manual verification", "Requirement coding", "Ranking"],
       meta: "30 VERIFIED POSTINGS · SEP 2026",
-      image: "/__l5e/assets-v1/4ef5a840-62a7-41e5-98a1-20bed9c0e84a/pg-jds.jpg",
+      image: "/site/img/playground/pg-jds.jpg",
       href: "https://junior-data-scientist.netlify.app"
     },
     {
@@ -99,7 +99,7 @@ const SITE = {
       why: "Where to live is a many-variable question best seen side by side.",
       how: ["OECD / Eurostat data", "Percentile scoring", "Geographic analysis", "Comparison"],
       meta: "391 CITIES · OECD / EUROSTAT",
-      image: "/__l5e/assets-v1/56c5c26e-e993-4c51-bda3-7bc0e11dc63d/pg-city.jpg",
+      image: "/site/img/playground/pg-city.jpg",
       href: "https://city-explorer-dashboard.netlify.app"
     }
   ],
