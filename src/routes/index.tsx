@@ -175,16 +175,6 @@ const html = `<!-- grain layers -->
 <!-- floating project preview -->
 <div id="progFloat"><img id="progFloatImg" class="bw" src="" alt=""></div>
 
-<!-- ═══ PLACEHOLDER IMAGE — swap for a real portrait / studio shot ═══ -->
-<div class="band">
-  <img class="bw" src="https://picsum.photos/seed/nate-desk/1600/900.jpg" alt="Workspace — placeholder image" data-parallax>
-  <div class="band-cap">
-    <div class="container">
-      <span class="chip"><span class="dot"></span> WORK IN PROGRESS — ALWAYS</span>
-      <span class="chip">IMAGE — REPLACE WITH PORTRAIT / STUDIO</span>
-    </div>
-  </div>
-</div>
 
 <!-- ============ CAPABILITIES ============ -->
 <section class="coaches" id="capabilities">
