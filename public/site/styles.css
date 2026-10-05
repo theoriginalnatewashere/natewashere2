@@ -510,7 +510,7 @@ body.route-project #ppRoot{display:block}
   .book h2{margin-bottom:1.4rem}
   .rc-sub,.pg-tag,.form-fine,.foot-bottom,.cplate .hint,.cplate .role,.stat .lbl,.hnote{font-size:.66rem}
   #menuBtn,#menuClose{width:44px;height:44px}
-  .socials button{width:44px;height:44px}
+  .socials a{width:44px;height:44px}
   .ctrl-btn{width:48px;height:48px}
   .car-segs button{height:4px}
   .foot-bottom{padding-bottom:calc(1.4rem + env(safe-area-inset-bottom))}
