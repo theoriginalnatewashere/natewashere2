@@ -243,69 +243,28 @@ const html = `<!-- grain layers -->
   <div class="container book-grid">
     <div data-reveal>
       <div class="kicker"><b>06</b> CONTACT</div>
-      <h2 class="display" id="contactTitle">GOT A PROBLEM <em>WORTH SOLVING?</em></h2>
-      <!-- PLACEHOLDER — replace with verified positioning: the kinds of projects, roles, and conversations Nathan is open to -->
-      <p id="contactIntro" style="color:var(--silver);max-width:48ch;margin-bottom:2.2rem;font-size:.95rem">A short paragraph goes here — the kinds of projects, roles, and conversations Nathan is open to, in his own words. Until then: the form works, and the address below is the direct route.</p>
-      <div class="steps">
-        <div class="step"><span class="n">01</span><i data-lucide="pen-line"></i><div class="t"><b>Write a few lines</b><span>What you're making, where you're stuck, what good looks like.</span></div></div>
-        <div class="step"><span class="n">02</span><i data-lucide="git-branch"></i><div class="t"><b>Pick a reason</b><span>Project, role, collaboration — or something else entirely.</span></div></div>
-        <div class="step"><span class="n">03</span><i data-lucide="mail"></i><div class="t"><b>Or just email</b><span>Skip the form — the address is right here.</span></div></div>
-      </div>
-      <div class="book-contact">
-        <!-- PLACEHOLDER EMAIL — replace with verified address -->
-        <a id="contactEmail" href="mailto:hello@natewashere.com"><i data-lucide="mail"></i> <span>HELLO@NATEWASHERE.COM</span></a>
-        <span><i data-lucide="link"></i> MORE LINKS IN THE FOOTER</span>
+      <h2 class="display" id="contactTitle">LET'S WORK <em>TOGETHER</em></h2>
+      <p id="contactIntro" class="ct-lead">Have a product, data, or AI problem worth exploring?</p>
+      <p class="ct-copy">I'm open to product design, UX research, data visualization, and human-centered AI opportunities.</p>
+      <div class="ct-actions">
+        <a class="btn btn-orange" href="mailto:nate@digitalnomad.jp">Email me <i data-lucide="arrow-right"></i></a>
       </div>
     </div>
 
-    <div class="form-panel" data-reveal style="--d:.15s" id="formPanel">
-      <div class="fp-head"><b>SAY HELLO</b><span>NO FORM CITY?</span></div>
-      <form id="bookForm" novalidate>
-        <div class="field" id="fName">
-          <label for="inName">Name *</label>
-          <input id="inName" type="text" autocomplete="name" placeholder="Your name">
-          <div class="err-msg">Tell me your name — 2+ characters</div>
-        </div>
-        <div class="field" id="fEmail">
-          <label for="inEmail">Email *</label>
-          <input id="inEmail" type="email" autocomplete="email" placeholder="you@somewhere.com">
-          <div class="err-msg">That email doesn't look right</div>
-        </div>
-        <div class="frow">
-          <div class="field" id="fReason">
-            <label for="inReason">Reason *</label>
-            <div class="sel">
-              <select id="inReason">
-                <option value="" selected disabled>Pick one</option>
-                <option>A project</option>
-                <option>A role or opportunity</option>
-                <option>A collaboration</option>
-                <option>Something else</option>
-              </select>
-              <i data-lucide="chevron-down"></i>
-            </div>
-            <div class="err-msg">Pick a reason — "something else" counts</div>
-          </div>
-          <div class="field">
-            <label for="inCompany">Company / Org (optional)</label>
-            <input id="inCompany" type="text" autocomplete="organization" placeholder="Where you're from">
-          </div>
-        </div>
-        <div class="field" id="fMsg">
-          <label for="inMsg">Message *</label>
-          <textarea id="inMsg" rows="4" placeholder="What are you making, where are you stuck…"></textarea>
-          <div class="err-msg">A few words help — 10+ characters</div>
-        </div>
-        <button class="btn btn-orange" type="submit">Send Message <i data-lucide="arrow-right"></i></button>
-        <p class="form-fine">Front-end demo — nothing is sent until a backend is wired up</p>
-      </form>
-      <div class="book-done">
-        <div class="done-ico"><i data-lucide="check"></i></div>
-        <h3>Validated — not sent.</h3>
-        <p>This site is front-end only for now, so nothing actually left your browser. Email <b>hello@natewashere.com</b> and it reaches Nate for real.</p>
-        <div class="ref">FORM DEMO — BACKEND TODO</div>
-        <button class="btn btn-ghost btn-sm" id="bookAgain">Write Another <i data-lucide="arrow-right"></i></button>
+    <div class="ct-bot" data-reveal style="--d:.15s">
+      <svg class="ct-bot-svg" viewBox="0 0 120 100" fill="none" aria-hidden="true" focusable="false">
+        <path d="M18 14h84a8 8 0 0 1 8 8v44a8 8 0 0 1-8 8H52l-18 16v-16H18a8 8 0 0 1-8-8V22a8 8 0 0 1 8-8z" stroke="currentColor" stroke-width="2"/>
+        <rect x="38" y="34" width="10" height="14" fill="#ff4d00"/>
+        <rect x="72" y="34" width="10" height="14" fill="#ff4d00"/>
+        <path d="M46 58h28" stroke="currentColor" stroke-width="2"/>
+        <path d="M60 14V4M56 4h8" stroke="currentColor" stroke-width="2"/>
+        <path d="M100 24h4M100 30h4" stroke="currentColor" stroke-width="2" opacity=".5"/>
+      </svg>
+      <div class="ct-bot-t">
+        <b>Ask about my work</b>
+        <span>Chat with an assistant about Nathan's background, projects, skills, and experience.</span>
       </div>
+      <a class="btn btn-ghost" href="https://natewashere.streamlit.app" target="_blank" rel="noopener noreferrer">Ask about my work <i data-lucide="arrow-up-right"></i></a>
     </div>
   </div>
 </section>
