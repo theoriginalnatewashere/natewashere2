@@ -83,7 +83,6 @@ function Chips({ items }: { items: string[] }) {
 
 function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", menuOpen);
@@ -95,13 +94,6 @@ function AboutPage() {
     };
   }, [menuOpen]);
 
-  useEffect(() => {
-    if (!toastMessage) return;
-    const t = setTimeout(() => setToastMessage(null), 3600);
-    return () => clearTimeout(t);
-  }, [toastMessage]);
-
-  const showCv = () => setToastMessage(CV_PLACEHOLDER_MESSAGE);
 
   return (
     <div>
