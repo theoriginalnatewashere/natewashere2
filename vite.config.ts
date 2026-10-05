@@ -15,7 +15,4 @@ export default defineConfig({
     pages: [{ path: "/" }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
-  // Cloudflare Pages static hosting: emit plain files to .output/public, no server runtime.
-  // (Inside the Lovable build environment this preset is overridden automatically.)
-  nitro: { preset: "static" },
 });
