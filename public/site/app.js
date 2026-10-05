@@ -218,30 +218,6 @@ function setSound(on){
     </div></div></div>
   </article>`).join('');
 
-/* ---------- build highlight slides (data-driven, no fabricated quotes) ---------- */
- $('#carTrack').innerHTML=PROJECTS.map((p,i)=>`
-  <article class="story">
-    <div class="story-in">
-      <div class="story-q">
-        <i data-lucide="quote"></i>
-        <span class="hnote">PROJECT NOTE — 0${i+1}</span>
-        <blockquote>${p.insight}</blockquote>
-        <div class="story-who">
-          <img class="bw" src="${p.thumb}" alt="">
-          <div><div class="nm">${p.title}</div><div class="meta">${p.category} — ${p.year}</div></div>
-        </div>
-      </div>
-      <div class="story-stats">
-        <div class="story-meta">
-          ${metaRow('Role',p.role)}
-          ${metaRow('Status',p.status)}
-          ${metaRow('Year',p.year)}
-          <a class="btn btn-ghost btn-sm" href="#/work/${p.slug}">View Project <i data-lucide="arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </article>`).join('');
-
 refreshIcons();
 
 /* ---------- reveal on scroll ---------- */

@@ -210,14 +210,15 @@ const html = `<!-- grain layers -->
         <h2 class="sec-title display">INSIDE THE <em>WORK.</em></h2>
       </div>
       <div class="controls">
-        <span class="counter"><b id="carNow">01</b> / <span id="carTotal">04</span></span>
-        <button class="ctrl-btn" id="carPrev" aria-label="Previous highlight"><i data-lucide="chevron-left"></i></button>
-        <button class="ctrl-btn" id="carNext" aria-label="Next highlight"><i data-lucide="chevron-right"></i></button>
+        <span class="counter" aria-live="polite"><b id="carNow">01</b> / <span id="carTotal">03</span></span>
+        <button class="ctrl-btn" id="carPrev" aria-label="Previous project"><i data-lucide="chevron-left"></i></button>
+        <button class="ctrl-btn" id="carNext" aria-label="Next project"><i data-lucide="chevron-right"></i></button>
       </div>
     </div>
+    <p class="iw-intro" data-reveal>A closer look at the thinking behind selected projects.</p>
 
-    <div class="car-viewport" id="carViewport" data-reveal>
-      <div class="car-track" id="carTrack"><!-- slides injected from PROJECTS --></div>
+    <div class="car-viewport" id="carViewport" data-reveal tabindex="0" role="region" aria-roledescription="carousel" aria-label="Inside the Work — use arrow keys to switch projects">
+      <div class="car-track" id="carTrack"><!-- slides injected from /site/inside-work.js --></div>
     </div>
     <div class="car-segs" id="carSegs" data-reveal></div>
   </div>
@@ -353,6 +354,7 @@ function Index() {
       if (cancelled) return;
       await loadScript("/site/content.js");
       await loadScript("/site/projects.js");
+      await loadScript("/site/inside-work.js");
       await loadScript("/site/app.js");
       if (cancelled) return;
       await loadScript("/site/mosaic.js");
