@@ -117,9 +117,8 @@ const SITE = {
   ],
 
   contact: {
-    titleHtml: 'GOT A PROBLEM <em>WORTH SOLVING?</em>',
-    intro: "Open to conversations about industrial product, data, and UX work — especially where physical and digital meet. Use the form or email directly.",
-    email: "hello@natewashere.com"
+    titleHtml: "LET'S WORK <em>TOGETHER</em>",
+    intro: "Have a product, data, or AI problem worth exploring?"
   },
 
   footer: {

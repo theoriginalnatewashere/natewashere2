@@ -568,3 +568,14 @@ body.route-project #ppRoot{display:block}
   .pg-arrow{min-height:0;padding-top:.45rem;font-size:.56rem}
 }
 @media(max-width:899px){.pg-grid{grid-template-columns:1fr}}
+
+/* contact — CTA-only */
+.book-grid{align-items:center}
+.ct-lead{font-size:1.15rem;color:var(--text);max-width:40ch;margin-bottom:.8rem}
+.ct-copy{color:var(--silver);font-size:.95rem;max-width:48ch;margin-bottom:2rem}
+.ct-actions .btn{font-size:.9rem;padding:1.1rem 2rem}
+.ct-bot{background:var(--panel2);border:1px solid var(--line);padding:2rem;display:flex;flex-direction:column;gap:1.2rem;align-items:flex-start}
+.ct-bot-svg{width:88px;height:auto;color:var(--silver)}
+.ct-bot-t b{display:block;font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.3rem;margin-bottom:.4rem}
+.ct-bot-t span{color:var(--muted);font-size:.88rem;max-width:40ch;display:block}
+@media(max-width:600px){.ct-actions .btn,.ct-bot .btn{width:100%;justify-content:center;min-height:48px}.ct-bot{padding:1.4rem}.ct-bot-svg{width:68px}}

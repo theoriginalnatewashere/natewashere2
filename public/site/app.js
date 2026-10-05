@@ -346,28 +346,7 @@ document.addEventListener('visibilitychange',()=>document.hidden?stopAuto():rest
 addEventListener('resize',measure);
 measure();goTo(0);restartAuto();
 
-/* ---------- contact form (front-end only — clearly not pretending to send) ---------- */
-const form=$('#bookForm'),panel=$('#formPanel');
-form.addEventListener('submit',e=>{
-  e.preventDefault();
-  const name=$('#inName').value.trim(),email=$('#inEmail').value.trim(),
-        reason=$('#inReason').value,message=$('#inMsg').value.trim();
-  const eOK=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  $('#fName').classList.toggle('error',name.length<2);
-  $('#fEmail').classList.toggle('error',!eOK);
-  $('#fReason').classList.toggle('error',!reason);
-  $('#fMsg').classList.toggle('error',message.length<10);
-  if(name.length<2||!eOK||!reason||message.length<10){toast('Check the highlighted fields','x');return;}
-  /* BACKEND TODO: POST {name,email,company,reason,message} to your endpoint / form service here */
-  console.info('CONTACT FORM — validated, no backend yet:',{name,email,reason,message});
-  panel.classList.add('sent');
-  toast('Validated — but nothing was sent (no backend yet)','info');
-});
- $('#bookAgain').addEventListener('click',()=>{panel.classList.remove('sent');form.reset();});
-['inName','inEmail','inReason','inMsg'].forEach(id=>{
-  $('#'+id).addEventListener('input',e=>e.target.closest('.field').classList.remove('error'));
-  $('#'+id).addEventListener('change',e=>e.target.closest('.field').classList.remove('error'));
-});
+/* ---------- contact: CTA links only (no form) ---------- */
 
 /* ---------- placeholder link actions (CV, socials, playground) ---------- */
  $$('[data-cv]').forEach(b=>b.addEventListener('click',e=>{
