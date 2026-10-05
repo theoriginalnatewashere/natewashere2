@@ -384,13 +384,6 @@ function AboutPage() {
         </div>
       </footer>
 
-      <div id="toasts" aria-live="polite">
-        {toastMessage && (
-          <div className="toast on">
-            <span>{toastMessage}</span>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
