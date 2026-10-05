@@ -10,5 +10,5 @@
 <!-- LOVABLE:END -->
 
 ## Deployment
-- Homepage is prerendered at build time (vite.config.ts `pages` + `prerender`) so `.output/public` deploys as a static site — keep routes free of per-request/server-only data.
+- Cloudflare Pages target: Nitro preset `cloudflare-pages` in vite.config.ts emits `dist/` with `_worker.js`; pages render in the Worker at request time, no TanStack prerender (the prerender step breaks with this preset).
 - Site images live in `public/site/img/`, not Lovable-hosted asset URLs — they must ship inside the static output for non-Lovable hosts.
