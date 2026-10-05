@@ -515,7 +515,7 @@ body.route-project #ppRoot{display:block}
   .ctrl-btn{width:48px;height:48px}
   .car-segs button{height:4px}
   .foot-bottom{padding-bottom:calc(1.4rem + env(safe-area-inset-bottom))}
-  #stickyBar{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));background:none;border:none;backdrop-filter:none}
+  #stickyBar{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));background:none;border:none;backdrop-filter:none;transform:translateY(calc(100% + 30px))}
   #stickyBar .container{width:100%;padding:0}
   #stickyBar .msg{display:none}
   #stickyBar .btn{width:100%;justify-content:center;min-height:48px;animation:none}

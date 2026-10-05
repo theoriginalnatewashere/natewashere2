@@ -345,9 +345,9 @@ const html = `<!-- grain layers -->
       <div>
         <h4>Elsewhere</h4>
         <ul>
-          <li><a href="#" data-social="LinkedIn">LinkedIn</a></li>
-          <li><a href="#" data-social="Instagram">Instagram</a></li>
-          <li><a href="#" data-social="GitHub">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/nethansu/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://substack.com/@natewashere26" target="_blank" rel="noopener noreferrer">Substack</a></li>
+          <li><a href="https://github.com/theoriginalnatewashere" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </div>
       <div>
