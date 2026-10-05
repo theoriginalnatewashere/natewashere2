@@ -259,68 +259,58 @@ if(fine){
   });
 });
 
-/* ---------- highlights carousel ---------- */
+/* ---------- Inside the Work carousel (no autoplay) ---------- */
 const vp=$('#carViewport'),track=$('#carTrack'),slides=$$('.story',track);
+if(vp&&slides.length){
 const segsBox=$('#carSegs');let carIdx=0,step=0;
-let dragging=false,startX=0,startTX=0,vel=0,lastX=0,lastT=0,autoTimer=null;
+let dragging=false,moved=false,startX=0,startTX=0,vel=0,lastX=0,lastT=0;
  $('#carTotal').textContent=String(slides.length).padStart(2,'0');
 slides.forEach((_,i)=>{
-  const b=document.createElement('button');b.setAttribute('aria-label','Go to highlight '+(i+1));
-  b.addEventListener('click',()=>{goTo(i);restartAuto();});segsBox.appendChild(b);
+  const b=document.createElement('button');b.setAttribute('aria-label','Go to project '+(i+1));
+  b.addEventListener('click',()=>goTo(i));segsBox.appendChild(b);
 });
 const segs=$$('button',segsBox);
 function measure(){step=slides[0].getBoundingClientRect().width+24;setX(-carIdx*step,false);}
 function setX(x,anim){
-  track.style.transition=anim?'transform .7s cubic-bezier(.22,1,.36,1)':'none';
+  track.style.transition=anim&&!reduced?'transform .7s cubic-bezier(.22,1,.36,1)':'none';
   track.style.transform=`translate3d(${x}px,0,0)`;track.dataset.x=x;
 }
 function curX(){return parseFloat(track.dataset.x||0);}
-function rubber(x){
-  const max=-(slides.length-1)*step;
-  if(x>0)return x*.32;
-  if(x<max)return max+(x-max)*.32;
-  return x;
-}
+function rubber(x){const max=-(slides.length-1)*step;if(x>0)return x*.32;if(x<max)return max+(x-max)*.32;return x;}
 function goTo(i){
   carIdx=Math.max(0,Math.min(slides.length-1,i));
   setX(-carIdx*step,true);
   $('#carNow').textContent=String(carIdx+1).padStart(2,'0');
-  segs.forEach((s,k)=>s.classList.toggle('on',k===carIdx));
-}
-function stopAuto(){clearInterval(autoTimer);autoTimer=null;}
-function restartAuto(){
-  stopAuto();
-  if(!reduced)autoTimer=setInterval(()=>goTo((carIdx+1)%slides.length),5600);
+  segs.forEach((s,k)=>{s.classList.toggle('on',k===carIdx);s.setAttribute('aria-current',k===carIdx?'true':'false');});
+  slides.forEach((s,k)=>{s.setAttribute('aria-hidden',k!==carIdx);s.inert=k!==carIdx;});
+  $('#carPrev').disabled=carIdx===0;$('#carNext').disabled=carIdx===slides.length-1;
 }
 vp.addEventListener('pointerdown',e=>{
-  dragging=true;vp.classList.add('dragging');vp.setPointerCapture(e.pointerId);
+  if(e.button!==0)return;dragging=true;moved=false;
   startX=e.clientX;startTX=curX();vel=0;lastX=e.clientX;lastT=performance.now();
-  track.style.transition='none';stopAuto();
 });
 vp.addEventListener('pointermove',e=>{
   if(!dragging)return;
-  const raw=startTX+(e.clientX-startX);
-  setX(rubber(raw),false);
-  const now=performance.now(),dt=now-lastT;
-  if(dt>0)vel=(e.clientX-lastX)/dt;lastX=e.clientX;lastT=now;
+  if(!moved&&Math.abs(e.clientX-startX)>6){moved=true;vp.classList.add('dragging');vp.setPointerCapture(e.pointerId);track.style.transition='none';}
+  if(!moved)return;
+  setX(rubber(startTX+(e.clientX-startX)),false);
+  const now=performance.now(),dt=now-lastT;if(dt>0)vel=(e.clientX-lastX)/dt;lastX=e.clientX;lastT=now;
 });
 function endDrag(){
   if(!dragging)return;dragging=false;vp.classList.remove('dragging');
-  const x=curX();
-  let t=Math.round((-x-vel*140)/step);
-  if(vel<-.5&&t===carIdx)t=carIdx+1;
-  if(vel>.5&&t===carIdx)t=carIdx-1;
-  goTo(t);setTimeout(restartAuto,300);
+  if(!moved)return;
+  let t=Math.round((-curX()-vel*140)/step);
+  if(vel<-.5&&t===carIdx)t=carIdx+1;if(vel>.5&&t===carIdx)t=carIdx-1;
+  goTo(t);
 }
-vp.addEventListener('pointerup',endDrag);
-vp.addEventListener('pointercancel',endDrag);
-vp.addEventListener('mouseenter',stopAuto);
-vp.addEventListener('mouseleave',()=>{if(!dragging)restartAuto();});
- $('#carPrev').addEventListener('click',()=>{goTo(carIdx-1);restartAuto();});
- $('#carNext').addEventListener('click',()=>{goTo(carIdx+1);restartAuto();});
-document.addEventListener('visibilitychange',()=>document.hidden?stopAuto():restartAuto());
+vp.addEventListener('pointerup',endDrag);vp.addEventListener('pointercancel',endDrag);
+vp.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false;}},true);
+vp.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();goTo(carIdx+1);}if(e.key==='ArrowLeft'){e.preventDefault();goTo(carIdx-1);}});
+ $('#carPrev').addEventListener('click',()=>goTo(carIdx-1));
+ $('#carNext').addEventListener('click',()=>goTo(carIdx+1));
 addEventListener('resize',measure);
-measure();goTo(0);restartAuto();
+measure();goTo(0);
+}
 
 /* ---------- contact: CTA links only (no form) ---------- */
 
