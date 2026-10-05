@@ -625,7 +625,7 @@ body.route-project #ppRoot{display:block}
 .ab-h2{font-size:clamp(1.7rem,3.2vw,2.6rem);max-width:14ch}
 .ab-body p{color:var(--silver);margin-bottom:1rem;max-width:62ch;font-size:.98rem}
 .ab-body p.ab-strong{color:var(--text);font-weight:600}
-.ab-quote{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.05;
+.ab-body .ab-quote{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.05;
   border-left:2px solid var(--orange);padding:.2rem 0 .2rem 1.2rem;margin:1.6rem 0;max-width:24ch;color:var(--text)}
 .ab-list{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 1.6rem}
 .ab-cta{padding:5.5rem 0}
