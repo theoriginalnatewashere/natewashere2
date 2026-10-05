@@ -55,7 +55,7 @@ const html = `<!-- grain layers -->
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#playground">Playground</a>
-      <a href="#" data-cv>CV</a>
+      <a href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-right">
@@ -71,7 +71,7 @@ const html = `<!-- grain layers -->
   <a class="m-link" href="#about"><i>01</i>About</a>
   <a class="m-link" href="#work"><i>02</i>Work</a>
   <a class="m-link" href="#playground"><i>03</i>Playground</a>
-  <a class="m-link" href="#" data-cv><i>04</i>CV</a>
+  <a class="m-link" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer"><i>04</i>CV</a>
   <a class="m-link" href="#contact"><i>05</i>Contact</a>
   <div class="menu-foot"><span>NATEWASHERE — PORTFOLIO</span><span>WORK FIRST, ALWAYS</span><span>HELLO@NATEWASHERE.COM</span></div>
 </div>
@@ -142,7 +142,7 @@ const html = `<!-- grain layers -->
         <p id="aboutP2">A second paragraph goes here — how he approaches problems, and what makes the combination of skills and experience distinctive. Keep it concise; selected work follows below.</p>
         <div class="about-btns">
           <a class="btn btn-ghost btn-sm" href="/about">Read More <i data-lucide="arrow-right"></i></a>
-          <button class="btn btn-orange btn-sm" data-todo="CV goes here — drop the file into the project and link it up">View Full CV <i data-lucide="arrow-right"></i></button>
+          <a class="btn btn-orange btn-sm" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">View Full CV <i data-lucide="arrow-right"></i></a>
         </div>
       </div>
     </div>
@@ -288,7 +288,7 @@ const html = `<!-- grain layers -->
           <li><a href="#work">Work</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#playground">Playground</a></li>
-          <li><a href="#" data-cv>CV</a></li>
+          <li><a href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
