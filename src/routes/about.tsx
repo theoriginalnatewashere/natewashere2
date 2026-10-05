@@ -36,7 +36,6 @@ export const Route = createFileRoute("/about")({
 });
 
 const CHATBOT_URL = "https://natewashere.streamlit.app";
-const CV_PLACEHOLDER_MESSAGE = "CV goes here — drop the file into the project and link it up";
 
 const navLinks = [
   { href: "/#work", label: "Work" },
@@ -84,7 +83,6 @@ function Chips({ items }: { items: string[] }) {
 
 function AboutPage() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", menuOpen);
@@ -96,13 +94,6 @@ function AboutPage() {
     };
   }, [menuOpen]);
 
-  useEffect(() => {
-    if (!toastMessage) return;
-    const t = setTimeout(() => setToastMessage(null), 3600);
-    return () => clearTimeout(t);
-  }, [toastMessage]);
-
-  const showCv = () => setToastMessage(CV_PLACEHOLDER_MESSAGE);
 
   return (
     <div>
@@ -149,15 +140,7 @@ function AboutPage() {
         <a className="m-link" href="/#playground">
           <i>03</i>Playground
         </a>
-        <a
-          className="m-link"
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setMenuOpen(false);
-            showCv();
-          }}
-        >
+        <a className="m-link" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">
           <i>04</i>CV
         </a>
         <a className="m-link" href="/#contact">
@@ -322,9 +305,9 @@ function AboutPage() {
               SEE THE <em>WORK.</em>
             </h2>
             <div className="ab-cta-row">
-              <button type="button" className="btn btn-orange" onClick={showCv}>
+              <a className="btn btn-orange" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">
                 View CV <ArrowRight />
-              </button>
+              </a>
               <a className="btn btn-ghost" href="/#work">
                 Explore Selected Work <ArrowDown />
               </a>
@@ -401,13 +384,6 @@ function AboutPage() {
         </div>
       </footer>
 
-      <div id="toasts" aria-live="polite">
-        {toastMessage && (
-          <div className="toast on">
-            <span>{toastMessage}</span>
-          </div>
-        )}
-      </div>
     </div>
   );
 }
