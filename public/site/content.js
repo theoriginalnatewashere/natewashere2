@@ -35,48 +35,36 @@ const SITE = {
 
   capabilities: [
     {
-      title: "Product Design",
-      role: "PROBLEM → PRODUCT",
-      image: "https://picsum.photos/seed/nate-cap-1/600/860.jpg",
-      description: "Framing fuzzy problems into flows, interfaces, and systems — then pressure-testing them with real people before anything gets built.",
-      bullets: ["Flows, wireframes & specs", "Interface systems & states", "Usability testing rounds"],
-      featuredLabel: "Featured Work",
-      featuredText: "Designing Data Autonomy — thesis case study",
-      href: "#/work/designing-data-autonomy",
-      cta: "See the Work"
+      title: "FRAME",
+      role: "Find the real problem.",
+      image: "/__l5e/assets-v1/6ffe8427-71d3-4b75-9c05-dc59b242fac4/01-frame.webp",
+      alt: "Problem framing with notes and system mapping on a wall.",
+      description: "Map the system before designing the solution. Look at people, objects, constraints, incentives, information flows, and technology to understand where the real opportunity sits.",
+      bullets: ["System Mapping", "Problem Framing", "Stakeholder Analysis"]
     },
     {
-      title: "UX Research",
-      role: "QUESTIONS → EVIDENCE",
-      image: "https://picsum.photos/seed/nate-cap-2/600/860.jpg",
-      description: "Asking better questions before jumping to solutions — interviews, observations, and synthesis that turn opinions into evidence a team can act on.",
-      bullets: ["Interviews & field sessions", "Usability testing", "Synthesis & findings"],
-      featuredLabel: "Featured Work",
-      featuredText: "WasteNot — research-led case study",
-      href: "#/work/wastenot",
-      cta: "See the Work"
+      title: "READ",
+      role: "Let evidence change the question.",
+      image: "/__l5e/assets-v1/78477877-a9ac-40b9-9684-00217aa02bf3/02-read.webp",
+      alt: "Reviewing charts and research data at a desk.",
+      description: "Use interviews, observations, behavioral data, datasets, and experiments as material for understanding what matters—not simply as validation for an existing idea.",
+      bullets: ["UX Research", "Data Analysis", "Behavioral Insight"]
     },
     {
-      title: "Prototyping",
-      role: "IDEA → ARTIFACT",
-      image: "https://picsum.photos/seed/nate-cap-3/600/860.jpg",
-      description: "Making ideas touchable early — from paper sketches to clickable builds — so decisions get made with something real in the room, not a slide.",
-      bullets: ["Sketches & flow maps", "Clickable prototypes", "Design–code handoff"],
-      featuredLabel: "Featured Work",
-      featuredText: "Emergency Dispatcher AI Chatbot — prototype",
-      href: "#/work/emergency-dispatcher-ai-chatbot",
-      cta: "See the Work"
+      title: "MAKE",
+      role: "Turn uncertainty into something tangible.",
+      image: "/__l5e/assets-v1/56353630-b598-4879-be36-4c046aa45a22/03-make.webp",
+      alt: "Building and testing a physical electronic prototype.",
+      description: "Build the quickest useful representation of an idea: sketches, interfaces, physical models, dashboards, AI experiments, or interactive prototypes.",
+      bullets: ["Prototyping", "Interaction Design", "Experimentation"]
     },
     {
-      title: "Experiments",
-      role: "PLAY → PRACTICE",
-      image: "https://picsum.photos/seed/nate-cap-4/600/860.jpg",
-      description: "A standing excuse to play: visual studies, tools, and side quests that feed the main work with new inputs — and keep the practice curious.",
-      bullets: ["Playground builds", "Visual studies", "Tools & small scripts"],
-      featuredLabel: "Lives In",
-      featuredText: "The Playground — below",
-      href: "#playground",
-      cta: "Tour the Playground"
+      title: "ADAPT",
+      role: "Test how the system responds.",
+      image: "/__l5e/assets-v1/dc261fa1-99b8-46e3-bc68-1306dda5fbf1/04-adapt.webp",
+      alt: "Evaluating a small prototype alongside a digital interface.",
+      description: "Put the idea into use, observe what happens, learn from failures and unexpected behavior, then refine the product or system around what the evidence shows.",
+      bullets: ["User Testing", "Iteration", "System Refinement"]
     }
   ],
 

@@ -30,18 +30,18 @@ function renderEditableContent(){
 
   const cg=document.getElementById('capabilityGrid');
   if(cg&&Array.isArray(SITE.capabilities))cg.innerHTML=SITE.capabilities.map((x,i)=>`
-    <div class="coach" data-reveal style="--d:${(i*.08).toFixed(2)}s" tabindex="0" aria-label="${x.title} — press enter to flip">
+    <div class="coach" data-reveal style="--d:${(i*.08).toFixed(2)}s" tabindex="0" role="button" aria-label="${x.title}: ${x.role} — press Enter to flip for detail">
       <div class="coach-inner">
         <div class="cface cfront">
-          <img class="bw" src="${x.image}" alt="${x.title} capability card">
+          <img class="bw" src="${x.image}" alt="${x.alt||x.title}">
           <div class="cplate"><span class="idx">0${i+1}</span><h3>${x.title}</h3><span class="role">${x.role}</span><span class="hint hint-desktop"><i data-lucide="repeat"></i> FLIP FOR DETAIL</span><span class="hint hint-touch"><i data-lucide="repeat"></i> TAP FOR DETAIL</span></div>
         </div>
         <div class="cface cback">
-          <div class="top"><span class="role">${x.role}</span><span class="chip">CAPABILITY 0${i+1}</span></div>
+          <div class="top"><span class="role">${x.role}</span><span class="chip">STEP 0${i+1}</span></div>
           <h3>${x.title}</h3><p class="bio">${x.description}</p>
           <ul class="certs">${(x.bullets||[]).map(b=>`<li><i data-lucide="badge-check"></i> ${b}</li>`).join('')}</ul>
-          <div class="sig"><div class="k">${x.featuredLabel||'Featured Work'}</div><div class="v">${x.featuredText||''}</div></div>
-          <a class="btn btn-ghost btn-sm" href="${x.href||'#'}">${x.cta||'See the Work'} <i data-lucide="arrow-right"></i></a>
+          ${x.featuredText?`<div class="sig"><div class="k">${x.featuredLabel||'Featured Work'}</div><div class="v">${x.featuredText}</div></div>`:''}
+          ${x.href?`<a class="btn btn-ghost btn-sm" href="${x.href}">${x.cta||'See the Work'} <i data-lucide="arrow-right"></i></a>`:''}
         </div>
       </div>
     </div>`).join('');

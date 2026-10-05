@@ -194,7 +194,7 @@ const html = `<!-- grain layers -->
         <div class="kicker"><b>03</b> HOW I WORK</div>
         <h2 class="sec-title display">FOUR WAYS <em>IN.</em></h2>
       </div>
-      <p class="sec-note">Hover, tap, or press Enter to flip a card.</p>
+      <p class="sec-note">Different problems need different starting points. The process moves between systems, evidence, prototypes, and behavior.</p>
     </div>
 
     <div class="coach-grid" id="capabilityGrid"><!-- injected from content.js --></div>
