@@ -36,7 +36,6 @@ export const Route = createFileRoute("/about")({
 });
 
 const CHATBOT_URL = "https://natewashere.streamlit.app";
-const CV_PLACEHOLDER_MESSAGE = "CV goes here — drop the file into the project and link it up";
 
 const navLinks = [
   { href: "/#work", label: "Work" },
@@ -149,15 +148,7 @@ function AboutPage() {
         <a className="m-link" href="/#playground">
           <i>03</i>Playground
         </a>
-        <a
-          className="m-link"
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            setMenuOpen(false);
-            showCv();
-          }}
-        >
+        <a className="m-link" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">
           <i>04</i>CV
         </a>
         <a className="m-link" href="/#contact">
@@ -322,9 +313,9 @@ function AboutPage() {
               SEE THE <em>WORK.</em>
             </h2>
             <div className="ab-cta-row">
-              <button type="button" className="btn btn-orange" onClick={showCv}>
+              <a className="btn btn-orange" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">
                 View CV <ArrowRight />
-              </button>
+              </a>
               <a className="btn btn-ghost" href="/#work">
                 Explore Selected Work <ArrowDown />
               </a>
