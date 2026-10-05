@@ -141,7 +141,7 @@ const html = `<!-- grain layers -->
         <p id="aboutP1"><b>Short biography goes here</b> — two or three sentences on who Nathan is, the kind of work he does, and the problems he likes to sit with. Source it from the existing CV and About page.</p>
         <p id="aboutP2">A second paragraph goes here — how he approaches problems, and what makes the combination of skills and experience distinctive. Keep it concise; selected work follows below.</p>
         <div class="about-btns">
-          <button class="btn btn-ghost btn-sm" data-todo="Full About page goes here — link it once it exists">Read More <i data-lucide="arrow-right"></i></button>
+          <a class="btn btn-ghost btn-sm" href="/about">Read More <i data-lucide="arrow-right"></i></a>
           <button class="btn btn-orange btn-sm" data-todo="CV goes here — drop the file into the project and link it up">View Full CV <i data-lucide="arrow-right"></i></button>
         </div>
       </div>
