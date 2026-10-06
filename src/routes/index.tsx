@@ -253,7 +253,7 @@ const html = `<!-- grain layers -->
       </svg>
       <div class="ct-bot-t">
         <b>Ask about my work</b>
-        <span>Chat with an assistant about Nathan's background, projects, skills, and experience.</span>
+        <span>Chat with an assistant about Nethan's background, projects, skills, and experience.</span>
       </div>
       <a class="btn btn-ghost" href="https://natewashere.streamlit.app" target="_blank" rel="noopener noreferrer">Ask about my work <i data-lucide="arrow-up-right"></i></a>
     </div>
@@ -275,7 +275,7 @@ const html = `<!-- grain layers -->
           <svg viewBox="0 0 32 32" fill="currentColor" style="width:22px;height:22px"><path d="M7 24V8h4l10 13.2V8h4v16h-4L11 10.8V24z"/><rect x="26.5" y="21" width="3.5" height="3.5" fill="#ff4d00"/></svg>
           <span><b style="font-size:1.05rem">NATEWASHERE<i class="h-o">.</i></b><br><small>NATHAN SUPAKITCHUMNAN</small></span>
         </a>
-        <p id="footerBlurb">Portfolio of Nathan Supakitchumnan — designer and builder. Work first, always.</p>
+        <p id="footerBlurb">Portfolio of Nethan Supakitchumnan — designer and builder. Work first, always.</p>
         <div class="socials">
           <a href="https://www.linkedin.com/in/nethansu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="ico-linkedin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
           <a href="https://substack.com/@natewashere26" target="_blank" rel="noopener noreferrer" aria-label="Substack"><svg class="substack" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.539 8.242H1.46V5.406h21.079zM1.46 10.532V21.74l10.54-7.155 10.539 7.155V10.532zM22.539 2.792H1.46V0h21.079z"/></svg></a>
@@ -303,7 +303,7 @@ const html = `<!-- grain layers -->
       <div>
         <h4>Status</h4>
         <ul>
-          <li>Built by hand — no template</li>
+          <li>Ready to collaborate</li>
           <li>Rebuild in progress</li>
           <li>Work first, always</li>
         </ul>
