@@ -96,7 +96,7 @@ function AboutPage() {
 
 
   return (
-    <div>
+    <div className="about-page">
       <nav id="nav" className="solid">
         <div className="container nav-in">
           <a className="brand" href="/" aria-label="Natewashere — home">
