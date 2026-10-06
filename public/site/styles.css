@@ -614,6 +614,20 @@ body.route-project #ppRoot{display:block}
 @media (prefers-reduced-motion:reduce){.coach-inner{transition:none!important}}
 
 /* ═══════════ ABOUT PAGE (/about) ═══════════ */
+.about-page{font-synthesis:none;text-rendering:geometricPrecision}
+/* Use em measures rather than engine-dependent, hinted zero-glyph (ch) widths.
+   Values retain the Chromium reference's reading widths and heading composition. */
+.about-page .display,.about-page .ab-quote,.about-page .brand b{font-weight:400}
+.about-page .ab-body b{font-weight:700}
+.about-page .ab-grid{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.about-page .ab-grid>*,.about-page .foot-grid>*,.about-page .ab-cta-row>*{min-width:0}
+.about-page .ab-h2{max-width:6.84em}
+.about-page .ab-lede{max-width:21.45em}
+.about-page .ab-intro,.about-page .ab-body p{max-width:35.59em}
+.about-page .ab-body .ab-quote{max-width:12em}
+.about-page .ab-cta-t{max-width:7.87em}
+.about-page .ab-list .chip{max-width:100%;white-space:normal}
+.about-page .ab-cta-row .btn svg,.about-page .kicker::after{flex-shrink:0}
 .ab-hero{padding:10rem 0 4.5rem;border-bottom:1px solid var(--line-soft)}
 .ab-title{font-size:clamp(2.8rem,8vw,7rem);margin-bottom:2.4rem}
 .ab-title em{font-style:normal;color:var(--orange)}
@@ -633,4 +647,5 @@ body.route-project #ppRoot{display:block}
 .ab-cta-t em{font-style:normal;color:var(--orange)}
 .ab-cta-row{display:flex;gap:.8rem;flex-wrap:wrap}
 @media(max-width:860px){.ab-hero{padding:8rem 0 3.5rem}.ab-grid{grid-template-columns:1fr;gap:1.6rem}.ab-sec{padding:3.5rem 0}}
+@media(max-width:860px){.about-page .ab-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:560px){.ab-cta-row .btn{width:100%;justify-content:center;min-height:48px}}
