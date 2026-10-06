@@ -615,6 +615,7 @@ body.route-project #ppRoot{display:block}
 
 /* ═══════════ ABOUT PAGE (/about) ═══════════ */
 .about-page{font-synthesis:none;text-rendering:geometricPrecision}
+.about-page .container{max-width:1280px}
 /* Use em measures rather than engine-dependent, hinted zero-glyph (ch) widths.
    Values retain the Chromium reference's reading widths and heading composition. */
 .about-page .display,.about-page .ab-quote,.about-page .brand b{font-weight:400}
