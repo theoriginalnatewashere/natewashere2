@@ -1,5 +1,4 @@
-# About browser audit
-- [x] Inspect implementation and compare Chromium, Firefox, and WebKit reference rendering.
-- [x] Apply About-only typography and layout corrections without content changes.
-- [x] Verify Chromium, Firefox, and WebKit at desktop, tablet, and mobile widths and check menu/navigation; branded Edge/Safari unavailable.
-- [x] Confirm homepage styles remain unchanged and check diagnostics (build OK); existing homepage routing test fails in its document-rendering harness, not-found test passes.
+# Shared project navigation
+- [ ] Inspect and reproduce header overlap and ALL WORK failures across project hashes.
+- [ ] Fix shared navigation positioning and homepage anchor scrolling without design changes.
+- [ ] Verify every project, direct loads, back/forward, and desktop/tablet/mobile layouts; run relevant tests and check production build diagnostics.
