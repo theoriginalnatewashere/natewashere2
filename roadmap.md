@@ -1,5 +1,5 @@
-# About browser audit
-- [x] Inspect implementation and compare Chromium, Firefox, and WebKit reference rendering.
-- [x] Apply About-only typography and layout corrections without content changes.
-- [x] Verify Chromium, Firefox, and WebKit at desktop, tablet, and mobile widths and check menu/navigation; branded Edge/Safari unavailable.
-- [x] Confirm homepage styles remain unchanged and check diagnostics (build OK); existing homepage routing test fails in its document-rendering harness, not-found test passes.
+# Shared project navigation
+- [x] Reproduced the global nav selector collision blocking ALL WORK and overlapping the header.
+- [x] Scoped fixed positioning to the global header; stabilized hash return scrolling and hidden-homepage canvas recovery.
+- [x] Verified all four projects, both return links, direct loads, next/previous, browser back/forward, accordion, and header/menu links at 1280, 768, 390, and 320px without overflow or runtime errors.
+- [x] Dedicated navigation tests: 5 passed; automatic production build: build OK. Existing index routing test still fails in its document-rendering harness; not-found test passes.

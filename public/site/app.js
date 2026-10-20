@@ -350,7 +350,7 @@ function renderProject(idx){
   pfOn=false;pf.classList.remove('on');
   ppRoot.innerHTML=`
   <article class="pp container">
-    <a class="pp-backlink mono" href="#work"><i data-lucide="arrow-left"></i> ALL WORK</a>
+    <a class="pp-backlink mono" href="/#work"><i data-lucide="arrow-left"></i> ALL WORK</a>
     <div class="kicker" data-reveal><b>PROJECT</b> 0${idx+1} / 0${PROJECTS.length}</div>
     <h1 class="display pp-title" data-reveal>${p.title}</h1>
     <div class="prog-meta pp-meta" data-reveal>
@@ -397,12 +397,12 @@ function renderProject(idx){
       ${prev?`<a class="ppn" href="#/work/${prev.slug}"><span class="k"><i data-lucide="arrow-left"></i> PREVIOUS</span><span class="t">${prev.title}</span><span class="s">${prev.category} · ${prev.year}</span></a>`:'<span></span>'}
       ${next?`<a class="ppn ppn-r" href="#/work/${next.slug}"><span class="k">NEXT <i data-lucide="arrow-right"></i></span><span class="t">${next.title}</span><span class="s">${next.category} · ${next.year}</span></a>`:'<span></span>'}
     </nav>
-    <div class="pp-back"><a class="btn btn-ghost" href="#work">Back to All Work <i data-lucide="arrow-up"></i></a></div>
+    <div class="pp-back"><a class="btn btn-ghost" href="/#work">Back to All Work <i data-lucide="arrow-up"></i></a></div>
   </article>`;
   ppRoot.style.display='block';
   document.body.classList.add('route-project');
   openMenu(false);
-  window.scrollTo({top:0,behavior:'auto'});
+  window.scrollTo({top:0,behavior:'instant'});
   document.title=`${p.title} — Natewashere`;
   refreshIcons();
   watchReveals(ppRoot);
@@ -416,7 +416,12 @@ function showHome(){
   const h=location.hash;
   if(h&&h.length>1){
     const el=document.getElementById(h.slice(1));
-    if(el)requestAnimationFrame(()=>el.scrollIntoView());
+    // Wait until the homepage is visible and hash navigation has settled.
+    if(el)requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      if(location.hash===h&&!document.body.classList.contains('route-project')){
+        el.scrollIntoView({block:'start',behavior:reduced?'instant':'smooth'});
+      }
+    }));
   }
 }
 function renderRoute(){

@@ -14,3 +14,4 @@
 - Site images live in `public/site/img/`, not Lovable-hosted asset URLs — they must ship inside the static output for non-Lovable hosts.
 - /about is a native React route that renders its own nav/footer markup with the shared /site/styles.css classes; the legacy /site/*.js scripts run only on the homepage, so links from /about point to /#section anchors.
 - About cross-browser typography corrections must be scoped to `.about-page`; use font-relative reading widths and shrink-safe grid tracks without changing shared portfolio styles.
+- Scope fixed header positioning to `#nav`, never the `nav` element; project navigation stays in document flow, and legacy hash returns scroll only after the homepage is visible.

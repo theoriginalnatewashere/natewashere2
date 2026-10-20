@@ -97,6 +97,7 @@
 
   function resize() {
     const r = hero.getBoundingClientRect();
+    if (!r.width || !r.height) return; // Direct project loads keep the homepage hidden.
     W = r.width; H = r.height; dpr = Math.min(devicePixelRatio || 1, 2);
     U = Math.max(H, W * .5) / 28;
     canvas.width = W * dpr; canvas.height = H * dpr;
@@ -124,6 +125,7 @@
 
   const order = B.slice().sort((a, b) => (a.y - b.y) || (a.x - b.x));
   function draw() {
+    if (!W || !H) return;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     if (bg) ctx.drawImage(bg, 0, 0, W, H);
     for (const b of order) prism(b);
@@ -188,6 +190,7 @@
   document.addEventListener('visibilitychange', () => { visible = !document.hidden; kick(); });
   reduce.addEventListener?.('change', () => { for (const b of B) { b.ox = b.oy = b.lz = b.rot = 0; } draw(); kick(); });
   addEventListener('resize', resize);
+  new ResizeObserver(resize).observe(hero); // Restore the canvas when ALL WORK reveals home.
   resize();
   kick();
 })();
