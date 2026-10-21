@@ -3,6 +3,7 @@ import { ArrowDown, ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState, type ReactNode } from "react";
 
 export const Route = createFileRoute("/about")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "About — Nathan Supakitchumnan · NATEWASHERE" },
