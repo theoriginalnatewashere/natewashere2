@@ -137,11 +137,10 @@ const html = `<!-- grain layers -->
     <div class="manifesto-grid">
       <h2 class="display" data-reveal id="aboutTitle">NATE MAKES THINGS —<br>THEN FIGURES OUT<br><span class="hl">WHY THEY WORK.</span></h2>
       <div class="manifesto-copy" data-reveal style="--d:.15s">
-        <!-- PLACEHOLDER BIO — replace both paragraphs with verified copy from the existing CV / About page -->
-        <p id="aboutP1"><b>Short biography goes here</b> — two or three sentences on who Nathan is, the kind of work he does, and the problems he likes to sit with. Source it from the existing CV and About page.</p>
-        <p id="aboutP2">A second paragraph goes here — how he approaches problems, and what makes the combination of skills and experience distinctive. Keep it concise; selected work follows below.</p>
+        <p id="aboutP1"><b>Nethan Supakitchumnan</b> is a multidisciplinary product and UX designer whose background spans industrial design, entrepreneurship, brand strategy, and applied data analytics. He designs across physical products, digital interfaces, and human-centered systems.</p>
+        <p id="aboutP2">He completed a Master of Data Driven Design at Utrecht University of Applied Sciences. His approach combines interviews and observation with analytics, prototyping, and user testing to make complex systems clearer, more useful, and more intuitive.</p>
         <div class="about-btns">
-          <a class="btn btn-ghost btn-sm" href="/about">Read More <i data-lucide="arrow-right"></i></a>
+          <a class="btn btn-ghost btn-sm" href="/about">Read Nethan’s About page <i data-lucide="arrow-right"></i></a>
           <a class="btn btn-orange btn-sm" href="/site/cv.pdf" target="_blank" rel="noopener noreferrer">View Full CV <i data-lucide="arrow-right"></i></a>
         </div>
       </div>

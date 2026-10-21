@@ -29,8 +29,8 @@ const SITE = {
 
   about: {
     titleHtml: 'TURN DATA INTO BETTER EXPERIENCES&nbsp;<br><span class="hl">INSIGHT TO PRODUCTS.</span>',
-    paragraph1Html: '<b>Nethan Supakitchumnan</b> is an industrial product, data-driven, and UX designer. His work sits where physical objects, information, and interfaces meet.',
-    paragraph2: "He is interested in how AI-enabled capabilities can redefine human/object interaction — and in testing those ideas with real people before they harden into products. He is especially interested in how people with objects, interfaces and systems behind them"
+    paragraph1Html: '<b>Nethan Supakitchumnan</b> is a multidisciplinary product and UX designer whose background spans industrial design, entrepreneurship, brand strategy, and applied data analytics. He designs across physical products, digital interfaces, and human-centered systems.',
+    paragraph2: "He completed a Master of Data Driven Design at Utrecht University of Applied Sciences. His approach combines interviews and observation with analytics, prototyping, and user testing to make complex systems clearer, more useful, and more intuitive."
   },
 
   capabilities: [
